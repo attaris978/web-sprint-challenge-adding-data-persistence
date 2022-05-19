@@ -111,6 +111,11 @@ Build an API inside the `api` folder with endpoints for:
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
+  Relational databases (RDBs) are a means of storing information and the relationships amongst its data points. The database structure is comprised of tables containing columns (which represent fields) and rows (which represent records). RDBs were first conceptualized of by Dr. Edgar Codd, an evolution of the mathematical concept of data mapping.
+  Structured Query Language (SQL) is the de facto programming language that was developed as a means of programmatically interacting with relational databases.
 2. Why do tables need a Primary Key?
+  The primary key provides a means for each item in a table to be uniquely identifiable.
 3. What is the name given to a table column that references the Primary Key on another table?
+  A Foreign Key
 4. What do we need in order to have a _many to many_ relationship between two tables?
+  An additional table which uses foreign keys to link the parts of the many-to-many relationship. Its own primary key becomes a combination of these foreign keys to provide unique primary-key combinations. The proper term for this sort of table is "associative table", though other common names include "linker," "join," "junction," "intersection," and "cross-reference" tables.

@@ -13,9 +13,8 @@ server.use('/api/resources', ResourcesRouter);
 server.use('/api/projects', ProjectsRouter);
 server.use('/api/tasks', TasksRouter);
 
-server.use( (err, req, res, next) => {
-  console.log("in the error catcher")
-    res.status(500).send(err);
+server.use( (err, req, res, next) => {  
+  res.status(500).send(err);
 })
 
 module.exports = server;
