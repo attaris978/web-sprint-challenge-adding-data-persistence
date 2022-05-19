@@ -3,16 +3,16 @@ const model = require('./model.js')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
     model.getProjects()
     .then(projects => res.status(200).json(projects))
-    .catch(() => res.status(500).json({message: "Failed to obtain projects from the server"}))
+    .catch( err => next(err))
 })
 
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
     model.addProject(req.body)
     .then(project => res.status(201).json(project))
-    .catch(() => res.status(500).json({message: "Failed to add project"}))
+    .catch( err => next(err))
 })
 
 module.exports = router
